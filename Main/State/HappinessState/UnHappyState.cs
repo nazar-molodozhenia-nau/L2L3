@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Main {
+    public class UnHappyState : IAnimalHappinessState {
 
-namespace Main {
-    public class UnHappyState {
-    
-    
-    
+        public bool Happiness(Animal animal) { animal.HappinessState = new UnHappyState(); return false; }
+
+        public void ChangeHappinessState(Animal animal) { animal.HappinessState = new HappyState(); }
+
     }
 }

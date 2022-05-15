@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Main {
+    public class HungryState : IAnimalHungerState {
 
-namespace Main {
-    public class HungryState {
+        public bool Hunger(Animal animal) { animal.HungerState = new HungryState(); return true; }
 
-
+        public void Eat(Animal animal) { animal.HungerState = new NotHungryState(); }
 
     }
 }

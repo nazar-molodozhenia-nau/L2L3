@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Main {
+    public class DieState : IAnimalLifeState {
 
-namespace Main {
-    public class DieState {
+        public bool Life(Animal animal) { animal.LifeState = new DieState(); return false; }
 
-
+        public void ChangeLifeState(Animal animal) { animal.LifeState = new DieState(); }
 
     }
 }
