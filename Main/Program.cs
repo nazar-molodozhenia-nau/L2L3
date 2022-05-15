@@ -5,7 +5,7 @@ namespace Main {
 
         static void Main(string[] args) {
             Console.OutputEncoding = System.Text.Encoding.Default;
-            //Clock.Start();
+            Clock.Start();
             Menu.Start();
         }
 

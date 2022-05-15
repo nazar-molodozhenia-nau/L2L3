@@ -44,7 +44,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clock\Clock.cs" />
+    <Compile Include="Menu\AnimalMenu.cs" />
+    <Compile Include="Menu\HouseMenu.cs" />
     <Compile Include="Menu\Menu.cs" />
+    <Compile Include="Menu\PetStoreMenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
