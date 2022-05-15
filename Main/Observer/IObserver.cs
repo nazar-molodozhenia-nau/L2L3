@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Main {
+﻿namespace Main {
     public interface IObserver {
 
+        void Subscribe(IAnimal animal);
+        void Unsubscribe(IAnimal animal);
 
+        void ReceiveMessageAboutHungerOfAnimal(IAnimal animal);
+        void NotReceiveMessageAboutHungerOfAnimal(IAnimal animal);
 
     }
 }

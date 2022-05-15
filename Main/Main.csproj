@@ -54,6 +54,9 @@
     <Compile Include="Menu\HouseMenu.cs" />
     <Compile Include="Menu\Menu.cs" />
     <Compile Include="Menu\PetStoreMenu.cs" />
+    <Compile Include="Observer\EventNotification\HoursNotification.cs" />
+    <Compile Include="Observer\EventNotification\MoveNotification.cs" />
+    <Compile Include="Observer\EventNotification\StateNotification.cs" />
     <Compile Include="Observer\IAnimal.cs" />
     <Compile Include="Observer\IObserver.cs" />
     <Compile Include="Program.cs" />
@@ -71,8 +74,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Observer\EventNotification\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

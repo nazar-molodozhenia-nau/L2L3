@@ -61,6 +61,88 @@ namespace Main {
 
         public abstract void Move();
 
+        public void Eat() {
+            if(LifeState.Life(this)) {
+                if(!AtLarge()) {
+                    if(HoursForNextMeal == 0) {
+                        HungerState.Eat(this);
+                        if(NotifyAboutEating != null) { NotifyAboutEating(); }
+                        HoursOfHunger = 0;
+                        HoursForNextMeal = 3;
+                        CountOfMeal++;
+                    }
+                } else { if(NotifyAboutWill != null) { NotifyAboutWill(); } }
+            } else { NotifyAboutLifeState(); }
+        }
+
+        public void Hunger() {
+            if(LifeState.Life(this)) {
+                if(!AtLarge()) {
+                    if(HungerState.Hunger(this)) {
+                        if(NotifyAboutHungryState != null) { NotifyAboutHungryState(); }
+                        if(NotifyAboutHoursOfHunger != null) { NotifyAboutHoursOfHunger(this); }
+                    } else {
+                        if(NotifyAboutNotHungryState != null) { NotifyAboutNotHungryState(); }
+                        if(NotifyAboutHoursForNextMeal != null) { NotifyAboutHoursForNextMeal(this); }
+                    }
+                } else { if(NotifyAboutWill != null) { NotifyAboutWill(); } }
+            } else { if(NotifyAboutLifeState != null) { NotifyAboutLifeState(); } }
+        }
+
+        public void Happiness() {
+            if(LifeState.Life(this)) {
+                if(HappinessState.Happiness(this)) { if(NotifyAboutHappyState != null) { NotifyAboutHappyState(); } } 
+                else { if(NotifyAboutUnHappyState != null) { NotifyAboutUnHappyState(); } }
+            } else { if(NotifyAboutLifeState != null) { NotifyAboutLifeState(); } }
+        }
+
+        public void TimeOfLife() {
+
+            TimerCallback timerCallback = new TimerCallback(Time);
+            Timer timer = new Timer(timerCallback, null, 0, 900);
+
+            void Time(object obj) {
+
+                Minutes++;
+                if(Clock.Hours >= 23 && Clock.Minutes >= 50 && CountOfCleaning == 0) { HappinessState.ChangeHappinessState(this); }
+                if(Minutes == 60) {
+                    Minutes = 0;
+                    Hours++;
+                    if(HoursForNextMeal != 0) { HoursForNextMeal--; } 
+                    else { HoursForNextMeal = 0; }
+                    HoursOfHunger++;
+                    if(Clock.Hours >= 24) { Hours = 0; CountOfMeal = 0; CountOfCleaning = 0; Days++; }
+                }
+
+                if((Clock.Hours >= 23 && Clock.Minutes >= 50 && CountOfMeal == 0) || (Clock.Hours >= 23 && Clock.Minutes >= 50 && CountOfMeal >= 3)) {
+                    LifeState.ChangeLifeState(this);
+                    timer = null;
+                }
+
+            }
+
+        }
+
+        public void Cleaning() {
+            if(LifeState.Life(this)) {
+                if(!AtLarge()) {
+                    NotifyAboutCleanState();
+                    if(HappinessState == new UnHappyState()) { HappinessState.ChangeHappinessState(this); }
+                    CountOfCleaning++;
+                } else { if(NotifyAboutWill != null) { NotifyAboutWill(); } }
+            } else { if(NotifyAboutLifeState != null) { NotifyAboutLifeState(); } }
+        }
+
+        public void Release() {
+            if(LifeState.Life(this)) {
+                ResidenceType = ResidenceType.Street;
+                HappinessState = new HappyState();
+                if(NotifyAboutWill != null) { NotifyAboutWill(); }
+            } else { if(NotifyAboutLifeState != null) { NotifyAboutLifeState(); } }
+        }
+
+        public bool AtLarge() { if(ResidenceType == ResidenceType.Street) { return true; } return false; }
+
         // Methods for Events
 
         protected void EventAboutDie() { NotifyAboutLifeState?.Invoke(); }
