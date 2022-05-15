@@ -45,6 +45,11 @@
   <ItemGroup>
     <Compile Include="Clock\Clock.cs" />
     <Compile Include="Entities\Animal.cs" />
+    <Compile Include="Entities\AuxiliaryVariables\ResidenceType.cs" />
+    <Compile Include="Entities\Cat.cs" />
+    <Compile Include="Entities\Owner.cs" />
+    <Compile Include="Entities\Parrot.cs" />
+    <Compile Include="Entities\Snake.cs" />
     <Compile Include="Menu\AnimalMenu.cs" />
     <Compile Include="Menu\HouseMenu.cs" />
     <Compile Include="Menu\Menu.cs" />
@@ -53,9 +58,15 @@
     <Compile Include="Observer\IObserver.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="State\HappinessState\HappyState.cs" />
     <Compile Include="State\HappinessState\IAnimalHappinessState.cs" />
+    <Compile Include="State\HappinessState\UnHappyState.cs" />
+    <Compile Include="State\HungerState\HungryState.cs" />
     <Compile Include="State\HungerState\IAnimalHungerState.cs" />
+    <Compile Include="State\HungerState\NotHungryState.cs" />
+    <Compile Include="State\LifeState\DieState.cs" />
     <Compile Include="State\LifeState\IAnimalLifeState.cs" />
+    <Compile Include="State\LifeState\LifeState.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

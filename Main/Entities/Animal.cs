@@ -19,9 +19,10 @@ namespace Main {
 
         public event MoveHandler NotifyAboutWalking;
         public event MoveHandler NotifyAboutRunning;
-        public event MoveHandler NotifyAboutSinging;
-        public event MoveHandler NotifyAboutFlying;
         public event MoveHandler NotifyAboutCrawling;
+        public event MoveHandler NotifyAboutFlying;
+
+        public event MoveHandler NotifyAboutSpeaking;
 
         public event HoursHandler NotifyAboutHoursOfHunger;
         public event HoursHandler NotifyAboutHoursForNextMeal;
@@ -39,9 +40,38 @@ namespace Main {
         public int CountOfMeal { get; private set; }
         public int CountOfCleaning { get; private set; }
 
-        protected int Hours { get; set; }
-        protected int Minutes { get; set; }
-        protected int Days { get; set; }
-       
+        public int Hours { get; set; }
+        public int Minutes { get; set; }
+        public int Days { get; set; }
+
+        // Variables in Constructor
+
+        public string Name { get; set; }
+        public ResidenceType ResidenceType { get; set; }
+        public int Eyes { get; set; }
+        public int Paws { get; set; }
+        public bool Tale { get; set; }
+        public bool Wings { get; set; }
+
+        // Button
+
+        public string Button { get; set; }
+
+        // Methods
+
+        public abstract void Move();
+
+        // Methods for Events
+
+        protected void EventAboutDie() { NotifyAboutLifeState?.Invoke(); }
+        protected void EventAboutWill() { NotifyAboutWill?.Invoke(); }
+
+        protected void EventAboutWalking() { NotifyAboutWalking?.Invoke(); }
+        protected void EventAboutRunning() { NotifyAboutRunning?.Invoke(); }
+        protected void EventAboutCrawling() { NotifyAboutCrawling?.Invoke(); }
+        protected void EventAboutFlying() { NotifyAboutFlying?.Invoke(); }
+
+        protected void EventAboutSpeaking() { NotifyAboutSpeaking?.Invoke(); }
+
     }
 }

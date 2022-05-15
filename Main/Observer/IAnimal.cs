@@ -17,12 +17,13 @@
 
         event StateHandler NotifyAboutCleanState;
         event StateHandler NotifyAboutWill;
-
+        
         event MoveHandler NotifyAboutWalking;
         event MoveHandler NotifyAboutRunning;
-        event MoveHandler NotifyAboutSinging;
-        event MoveHandler NotifyAboutFlying;
         event MoveHandler NotifyAboutCrawling;
+        event MoveHandler NotifyAboutFlying;
+
+        event MoveHandler NotifyAboutSpeaking;
 
         event HoursHandler NotifyAboutHoursOfHunger;
         event HoursHandler NotifyAboutHoursForNextMeal;
