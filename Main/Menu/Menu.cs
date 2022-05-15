@@ -19,9 +19,7 @@ namespace Main {
 
                 switch(key) {
                     case ConsoleKey.D1:
-                        // Test Clock
-                        Console.WriteLine(Clock.PrintTime());
-                        Console.ReadKey();
+                        //
                         break;
                     case ConsoleKey.D2:
                         //
