@@ -73,6 +73,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Diagrams\RelationshipMenu.cd" />
+    <None Include="Diagrams\State.cd" />
+    <None Include="Diagrams\Observer.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

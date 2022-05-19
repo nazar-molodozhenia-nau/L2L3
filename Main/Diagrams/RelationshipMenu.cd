@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Main.AnimalMenu">
+    <Position X="4.25" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menu\AnimalMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.HouseMenu">
+    <Position X="4.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menu\HouseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.Menu">
+    <Position X="5.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Menu\Menu.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="owner" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Main.PetStoreMenu">
+    <Position X="6.25" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Menu\PetStoreMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.Owner">
+    <Position X="8.25" Y="1.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAIAAEAAAAAAAAAAAAAAAAACAAAAYIAAAAAAAAA=</HashCode>
+      <FileName>Entities\Owner.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Animal" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Animal">
+    <Position X="12.5" Y="2.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Events" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEQEAwIAkISQAoEARATIgMQAghACIAiDYIFFEBAwIAE=</HashCode>
+      <FileName>Entities\Animal.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

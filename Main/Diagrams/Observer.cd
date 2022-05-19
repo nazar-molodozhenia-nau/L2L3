@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Main.Animal">
+    <Position X="6.75" Y="2.5" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Protected" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEQEAwIAkISQAoEARATIgMQAghACIAiDYIFFEBAwIAE=</HashCode>
+      <FileName>Entities\Animal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ResidenceType" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Cat">
+    <Position X="3.5" Y="3" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Public" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Cat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.Parrot">
+    <Position X="3.5" Y="4.5" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Public" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Parrot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.Snake">
+    <Position X="3.5" Y="6" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Public" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Snake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.HoursNotification" Collapsed="true">
+    <Position X="1.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIABAAAAAA=</HashCode>
+      <FileName>Observer\EventNotification\HoursNotification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.MoveNotification" Collapsed="true">
+    <Position X="1.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAgCAAAAAAAAAAAAAQAEAA=</HashCode>
+      <FileName>Observer\EventNotification\MoveNotification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.StateNotification" Collapsed="true">
+    <Position X="1.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASBAgAAAAAAAAAEAUAAAQAAAAAAAAAAAAAAAABAAACA=</HashCode>
+      <FileName>Observer\EventNotification\StateNotification.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.Owner">
+    <Position X="11.25" Y="3.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAIAAEAAAAAAAAAAAAAAAAACAAAAYIAAAAAAAAA=</HashCode>
+      <FileName>Entities\Owner.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Animal" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Main.IObserver" Collapsed="true">
+    <Position X="12.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAIAAAAAAAAAAAAAAAAAAAACAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Observer\IObserver.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Main.IAnimal" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAwAAAAAAAAEAAABIgEAAgAAAAAiCAAAEEAAQIAE=</HashCode>
+      <FileName>Observer\IAnimal.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Main.ResidenceType">
+    <Position X="11.25" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Entities\AuxiliaryVariables\ResidenceType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="Main.StateHandler" Collapsed="true">
+    <Position X="3.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Observer\IAnimal.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Main.MoveHandler" Collapsed="true">
+    <Position X="3.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Observer\IAnimal.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="Main.HoursHandler" Collapsed="true">
+    <Position X="3.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Observer\IAnimal.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

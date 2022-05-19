@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Main.Animal">
+    <Position X="3.75" Y="0.75" Width="3.25" />
+    <Compartments>
+      <Compartment Name="Protected" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEQEAwIAkISQAoEARATIgMQAghACIAiDYIFFEBAwIAE=</HashCode>
+      <FileName>Entities\Animal.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ResidenceType" />
+      <Property Name="HungerState" />
+      <Property Name="HappinessState" />
+      <Property Name="LifeState" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.Cat">
+    <Position X="0.5" Y="1.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Public" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Cat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.Parrot">
+    <Position X="0.5" Y="2.75" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Public" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Parrot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.Snake">
+    <Position X="0.5" Y="4.25" Width="2.25" />
+    <Compartments>
+      <Compartment Name="Public" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entities\Snake.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Main.HappyState" Collapsed="true">
+    <Position X="10.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>State\HappinessState\HappyState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.UnHappyState" Collapsed="true">
+    <Position X="10.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>State\HappinessState\UnHappyState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.HungryState" Collapsed="true">
+    <Position X="10.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>State\HungerState\HungryState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.NotHungryState" Collapsed="true">
+    <Position X="10.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>State\HungerState\NotHungryState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.DieState" Collapsed="true">
+    <Position X="10.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>State\LifeState\DieState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Main.LifeState" Collapsed="true">
+    <Position X="10.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>State\LifeState\LifeState.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Main.IAnimalHappinessState">
+    <Position X="8.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>State\HappinessState\IAnimalHappinessState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Main.IAnimalHungerState">
+    <Position X="8.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>State\HungerState\IAnimalHungerState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Main.IAnimalLifeState">
+    <Position X="8.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>State\LifeState\IAnimalLifeState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Main.ResidenceType">
+    <Position X="4.25" Y="6" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Entities\AuxiliaryVariables\ResidenceType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
