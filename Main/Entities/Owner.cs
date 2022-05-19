@@ -15,6 +15,8 @@
             animal.NotifyAboutUnHappyState += StateNotification.UnHappyNotification;
             animal.NotifyAboutCleanState += StateNotification.CleanNotification;
             animal.NotifyAboutWill += StateNotification.AtLargeNotification;
+            animal.NotifyAboutNotWill += StateNotification.AtNotLargeNotification;
+            animal.NotifyAboutSell += StateNotification.SellNotification;
 
             // Move.
 
@@ -36,6 +38,8 @@
             animal.NotifyAboutUnHappyState -= StateNotification.UnHappyNotification;
             animal.NotifyAboutCleanState -= StateNotification.CleanNotification;
             animal.NotifyAboutWill -= StateNotification.AtLargeNotification;
+            animal.NotifyAboutNotWill += StateNotification.AtNotLargeNotification;
+            animal.NotifyAboutSell += StateNotification.SellNotification;
             animal.NotifyAboutHungryState -= StateNotification.HungerNotification;
             animal.NotifyAboutNotHungryState -= StateNotification.NotHungerNotification;
 

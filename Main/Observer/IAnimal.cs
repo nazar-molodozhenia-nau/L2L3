@@ -17,7 +17,10 @@
 
         event StateHandler NotifyAboutCleanState;
         event StateHandler NotifyAboutWill;
-        
+        event StateHandler NotifyAboutNotWill;
+
+        event StateHandler NotifyAboutSell;
+
         event MoveHandler NotifyAboutWalking;
         event MoveHandler NotifyAboutRunning;
         event MoveHandler NotifyAboutCrawling;

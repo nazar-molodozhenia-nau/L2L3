@@ -16,6 +16,9 @@ namespace Main {
 
         public event StateHandler NotifyAboutCleanState;
         public event StateHandler NotifyAboutWill;
+        public event StateHandler NotifyAboutNotWill;
+
+        public event StateHandler NotifyAboutSell;
 
         public event MoveHandler NotifyAboutWalking;
         public event MoveHandler NotifyAboutRunning;
@@ -127,7 +130,7 @@ namespace Main {
             if(LifeState.Life(this)) {
                 if(!AtLarge()) {
                     NotifyAboutCleanState();
-                    if(HappinessState == new UnHappyState()) { HappinessState.ChangeHappinessState(this); }
+                    HappinessState = new HappyState();
                     CountOfCleaning++;
                 } else { if(NotifyAboutWill != null) { NotifyAboutWill(); } }
             } else { if(NotifyAboutLifeState != null) { NotifyAboutLifeState(); } }
@@ -140,6 +143,16 @@ namespace Main {
                 if(NotifyAboutWill != null) { NotifyAboutWill(); }
             } else { if(NotifyAboutLifeState != null) { NotifyAboutLifeState(); } }
         }
+
+        public void Return() {
+            if(LifeState.Life(this)) {
+                ResidenceType = ResidenceType.House;
+                HappinessState = new UnHappyState();
+                if(NotifyAboutNotWill != null) { NotifyAboutNotWill(); }
+            } else { if(NotifyAboutLifeState != null) { NotifyAboutLifeState(); } }
+        }
+
+        public void SellAnimal(Owner owner) { if(LifeState.Life(this)) { owner.Animal.NotifyAboutSell(); owner.Unsubscribe(owner.Animal); owner.Animal = null;  owner.IsAnimal = false;  } }
 
         public bool AtLarge() { if(ResidenceType == ResidenceType.Street) { return true; } return false; }
 

@@ -44,6 +44,7 @@ namespace Main {
                                 owner.Subscribe(cat);
                                 owner.IsAnimal = true;
                                 owner.Animal = cat;
+                                owner.ReceiveMessageAboutHungerOfAnimal(owner.Animal);
                                 Console.WriteLine("Тварина названа та куплена!");
                                 Console.ReadKey();
                                 break;
@@ -56,6 +57,7 @@ namespace Main {
                                 owner.Subscribe(snake);
                                 owner.IsAnimal = true;
                                 owner.Animal = snake;
+                                owner.ReceiveMessageAboutHungerOfAnimal(owner.Animal);
                                 Console.WriteLine("Тварина названа та куплена!");
                                 Console.ReadKey();
                                 break;
@@ -68,6 +70,7 @@ namespace Main {
                                 owner.Subscribe(parrot);
                                 owner.IsAnimal = true;
                                 owner.Animal = parrot;
+                                owner.ReceiveMessageAboutHungerOfAnimal(owner.Animal);
                                 Console.WriteLine("Тварина названа та куплена!");
                                 Console.ReadKey();
                                 break;
